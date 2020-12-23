@@ -1,0 +1,190 @@
+﻿/*Animations*/
+@keyframes headerAppear {
+    0% {
+        opacity:0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+@keyframes moveLeft {
+    0% {
+        transform:translateX(100%)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+#body {
+    background-image: url(../images/SpaceBackground.jpg);
+    background-size: auto;
+    background-repeat: repeat-y;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-color: black;
+    font-family: 'Roboto', sans-serif;
+    display:grid;
+    grid-template-columns: 30% 40px auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+#header, #aside {
+    background-color: #ffc14d;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#header {
+    width: 100%;
+    grid-column: 1/ span 4;
+    grid-row: 1;
+    animation-name: moveRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+#aside {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 3;
+    animation-name: headerAppear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+    #aside button {
+        padding: 20px;
+        background-color: #fff6d3;
+        border-radius: 25px;
+    }
+
+        #aside button:hover {
+            background-color: #b39836;
+        }
+
+#socialLinks img:hover {
+    height: 120px;
+}
+
+#navigation, #mainContent {
+    background-color: #fff6d3;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+#navigation {
+    width: 100%;
+    text-align: center;
+    grid-column: 1/ span 4;
+    grid-row: 2;
+    margin-top: 40px;
+    animation-name: moveLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    margin-bottom: 40px;
+}
+
+    #navigation ul {
+        margin: 20px;
+    }
+
+    #navigation li {
+        display: inline;
+    }
+
+    #navigation a {
+        padding: 20px;
+        background-color: #ffc14d;
+        width: 100px;
+        margin: 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        color: black;
+    }
+
+        #regList a:hover {
+            background-color: #b39836;
+        }
+
+#mainContent {
+    width: 100%;
+    grid-column: 3/ span 2;
+    grid-row: 3/ span 2;
+    animation-name: headerAppear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+}
+
+.MyImage {
+    border-radius: 75px;
+    height: 300px;
+}
+
+#mainContent img {
+    padding: 25px;
+    height: 150px;
+}
+
+#dropList {
+    display: none;
+}
+
+    #dropList li {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #dropList a {
+        padding: 20px;
+        background-color: #ffc14d;
+        border-radius: 25px;
+    }
+
+    #dropList a:hover {
+        background-color: #b39836;
+    }
+
+@media only screen and (max-width:990px) {
+    #dropList{
+        display:initial;
+    }
+
+    #regList{
+        display:none;
+    }
+
+    #aside {
+        width: 100%;
+        grid-column: 1/ span 4;
+        grid-row: 4;
+        background-color: #fff6d3;
+    }
+        #aside button {
+            background-color: #ffc14d;
+        }
+
+    #mainContent {
+        width: 100%;
+        grid-column: 1/ span 4;
+        grid-row: 3;
+        background-color: #ffc14d;
+        margin-bottom:40px;
+    }
+}
