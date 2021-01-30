@@ -39,7 +39,7 @@
     grid-template-rows: auto auto auto auto;
 }
 
-#header, #aside {
+#header, #aside, #projects {
     background-color: #ffc14d;
     padding: 25px;
     border-radius: 25px;
@@ -58,7 +58,7 @@
 #aside {
     width: 100%;
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 4;
     animation-name: headerAppear;
     animation-duration: 2s;
     animation-iteration-count: 1;
@@ -83,6 +83,47 @@
     padding: 25px;
     border-radius: 25px;
 }
+
+#projects {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    grid-column: 1/ span 4;
+    grid-row: 3;
+    animation-name: moveRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    margin-bottom: 40px;
+}
+
+.imgDesc {
+    display: none;
+    position: absolute;
+    font-size: x-large;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.projectImg {
+    width: 30%;
+    position: relative;
+    display: inline-block;
+    padding: 25px;
+    margin: auto;
+}
+
+    .projectImg img {
+        width: 100%;
+    }
+
+    .projectImg:hover > .imgDesc {
+        display: initial;
+        background-color: #fff6d3;
+        width: 100%;
+        border-radius: 25px;
+    }
 
 #navigation {
     width: 100%;
@@ -121,7 +162,7 @@
 #mainContent {
     width: 100%;
     grid-column: 3/ span 2;
-    grid-row: 3/ span 2;
+    grid-row: 4/ span 2;
     animation-name: headerAppear;
     animation-duration: 2s;
     animation-iteration-count: 1;
@@ -129,6 +170,7 @@
 
 h1, h2, h3 {
     font-family: 'Roboto Slab', serif;
+    text-decoration:underline;
 }
 
 .MyImage {
@@ -173,10 +215,28 @@ h1, h2, h3 {
         display:none;
     }
 
+    #projects {
+        width: 100%;
+        display: block;
+        position: relative;
+        text-align: center;
+        grid-column: 1/ span 4;
+        grid-row: 3;
+    }
+
+    .projectImg {
+        width: 100%;
+        max-width:330px;
+        position: relative;
+        display: block;
+        padding: 25px;
+        margin: auto;
+    }
+
     #aside {
         width: 100%;
         grid-column: 1/ span 4;
-        grid-row: 4;
+        grid-row: 5;
         background-color: #fff6d3;
     }
         #aside button {
@@ -186,7 +246,7 @@ h1, h2, h3 {
     #mainContent {
         width: 100%;
         grid-column: 1/ span 4;
-        grid-row: 3;
+        grid-row: 4;
         background-color: #ffc14d;
         margin-bottom:40px;
     }
