@@ -1,255 +1,65 @@
-﻿/*Animations*/
-@keyframes headerAppear {
-    0% {
-        opacity:0;
-    }
-
-    100% {
-        opacity: 100;
-    }
-}
-@keyframes moveLeft {
-    0% {
-        transform:translateX(100%)
-    }
-
-    100% {
-        transform: translateX(0px)
-    }
-}
-@keyframes moveRight {
-    0% {
-        transform: translateX(-100%)
-    }
-
-    100% {
-        transform: translateX(0px)
-    }
+﻿body {
+    background-image: linear-gradient(#E9C46A,#E76F51);
 }
 
-#body {
+h1, h3 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+#home {
+    height: 100vh;
     background-image: url(../images/SpaceBackground.jpg);
-    background-size: auto;
-    background-repeat: repeat-y;
-    padding: 50px;
-    border-color: black;
-    font-family: 'Roboto', sans-serif;
-    display:grid;
-    grid-template-columns: 30% 40px auto auto;
-    grid-template-rows: auto auto auto auto;
+    color:white;
 }
 
-#header, #aside, #projects {
-    background-color: #ffc14d;
-    padding: 25px;
-    border-radius: 25px;
-    text-align: center;
+#name {
+    color: #2A9D8F;
 }
 
-#header {
-    width: 100%;
-    grid-column: 1/ span 4;
-    grid-row: 1;
-    animation-name: moveRight;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
+#intro_container{
+    position:absolute;
+    top:30%;
+    left:5%;
 }
 
-#aside {
-    width: 100%;
-    grid-column: 1;
-    grid-row: 4;
-    animation-name: headerAppear;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
+#intro {
+    background-color: #264653;
 }
 
-    #aside button {
-        padding: 20px;
-        background-color: #fff6d3;
-        border-radius: 25px;
+#contact, .navbar-custom , .nav-link{
+    background-color: #264653;
+    color:white;
+    font-size:1.2em;
+}
+
+    .nav-link:hover {
+        color: #2A9D8F;
     }
 
-        #aside button:hover {
-            background-color: #b39836;
-        }
-
-#socialLinks img:hover {
-    height: 120px;
+#view_img, .projects img{
+    width:100%;
 }
 
-#navigation, #mainContent {
-    background-color: #fff6d3;
-    padding: 25px;
-    border-radius: 25px;
-}
-
-#projects {
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    grid-column: 1/ span 4;
-    grid-row: 3;
-    animation-name: moveRight;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    margin-bottom: 40px;
-}
-
-.imgDesc {
+.project_details {
     display: none;
+    background-color: #2A9D8F;
+    color: white;
     position: absolute;
-    font-size: x-large;
-    border:solid black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    padding: 20%;
+    height: 100%;
+    width:100%;
+}
+.projects_details:hover {
+    border: solid 10px #2A9D8F;
 }
 
-.projectImg {
-    width: 30%;
-    position: relative;
-    display: inline-block;
-    padding: 25px;
-    margin: auto;
-}
 
-    .projectImg img {
-        width: 100%;
-    }
-
-    .projectImg:hover > .imgDesc {
-        display: initial;
-        background-color: #fff6d3;
-        width: 100%;
-        border-radius: 25px;
-    }
-
-#navigation {
+.sticky {
+    position: fixed;
+    top: 0;
     width: 100%;
-    text-align: center;
-    grid-column: 1/ span 4;
-    grid-row: 2;
-    margin-top: 40px;
-    animation-name: moveLeft;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    margin-bottom: 40px;
-}
-
-    #navigation ul {
-        margin: 20px;
-    }
-
-    #navigation li {
-        display: inline;
-    }
-
-    #navigation a {
-        padding: 20px;
-        background-color: #ffc14d;
-        width: 100px;
-        margin: 20px;
-        border-radius: 25px;
-        border: solid black;
-        text-decoration: none;
-        color: black;
-    }
-
-        #regList a:hover {
-            background-color: #b39836;
-        }
-
-#mainContent {
-    width: 100%;
-    grid-column: 3/ span 2;
-    grid-row: 4/ span 2;
-    animation-name: headerAppear;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-}
-
-h1, h2, h3 {
-    font-family: 'Roboto Slab', serif;
-    text-decoration:underline;
-}
-
-.MyImage {
-    border-radius: 75px;
-    height: 300px;
-}
-
-#mainContent img {
-    padding: 25px;
-    height: 150px;
-}
-
-#dropList {
-    display: none;
-}
-
-    #dropList li {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    #dropList a {
-        padding: 20px;
-        background-color: #ffc14d;
-        border-radius: 25px;
-    }
-
-    #dropList a:hover {
-        background-color: #b39836;
-    }
-
-@media only screen and (max-width:990px) {
-    #body{
-         padding: 20px;  
-    }
-    
-    #dropList{
-        display:initial;
-    }
-
-    #regList{
-        display:none;
-    }
-
-    #projects {
-        width: 100%;
-        display: block;
-        position: relative;
-        text-align: center;
-        grid-column: 1/ span 4;
-        grid-row: 3;
-    }
-
-    .projectImg {
-        width: 100%;
-        max-width:330px;
-        position: relative;
-        display: block;
-        padding: 25px;
-        margin: auto;
-    }
-
-    #aside {
-        width: 100%;
-        grid-column: 1/ span 4;
-        grid-row: 5;
-        background-color: #fff6d3;
-    }
-        #aside button {
-            background-color: #ffc14d;
-        }
-
-    #mainContent {
-        width: 100%;
-        grid-column: 1/ span 4;
-        grid-row: 4;
-        background-color: #ffc14d;
-        margin-bottom:40px;
-    }
+    z-index:9999;
 }
