@@ -22,11 +22,6 @@ h1, h3 {
     color: #2A9D8F;
 }
 
-#intro_container{
-    position:absolute;
-    top:30%;
-    left:5%;
-}
 
 #intro {
     background-color: #264653;
@@ -42,6 +37,10 @@ h1, h3 {
         color: #2A9D8F;
     }
 
+.navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+}
+
 #view_img, .projects img{
     width:100%;
 }
@@ -53,7 +52,6 @@ h1, h3 {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 20%;
     height: 100%;
     width:100%;
 }
